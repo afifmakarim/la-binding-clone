@@ -1,12 +1,16 @@
 <script>
   import { tweened } from "svelte/motion";
-
+  import { navigate } from "svelte-navigator";
   import { count } from "../store";
 
   // 5 Minutes Counter
 
   $: minutes = Math.floor($count / 60);
   $: seconds = Math.floor($count - minutes * 60);
+
+  $: if (minutes < 1 && seconds < 1) {
+    navigate("/failed", { replace: true });
+  }
 </script>
 
 <div class="progress">Selesaikan proses dalam {minutes}:{seconds}</div>

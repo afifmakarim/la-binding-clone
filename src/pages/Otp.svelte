@@ -45,10 +45,6 @@
 
   $: minutes = Math.floor($timer / 60);
   $: seconds = Math.floor($timer - minutes * 60);
-
-  $: if (minutes === 0 && seconds === 0) {
-    navigate("/failed", { replace: true });
-  }
 </script>
 
 <main>
