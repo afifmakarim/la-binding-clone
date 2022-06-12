@@ -56,7 +56,7 @@
     <img class="banner" src={HeadBG} alt="banner" />
   </div>
   <div class="title-wrapper">
-    Masukkan kode verifikasi yang dikirim melalui SMS ke nomor 6281341692502
+    Masukkan kode verifikasi yang dikirim melalui SMS ke nomor ********2502
   </div>
 
   <form class="input-field-wrapper" on:submit|preventDefault={validate}>
